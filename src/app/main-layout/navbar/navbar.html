@@ -15,7 +15,7 @@
 
 <nav class="navbar px-4">
     <a [routerLink]="'/Home'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }" class="logo">
-        <img loading="lazy" src="images/logo.webp" width="50" height="50" alt="" />
+        <img loading="lazy" fetchpriority="high" src="images/logo.webp" width="50" height="50" alt="" />
     </a>
 
     <div class="nav-links desktop-menu">
@@ -46,7 +46,7 @@
 <div class="mobile-menu-overlay" [class.open]="showMobileMenu">
     <div class="logo-mobile">
         <a [routerLink]="'/Home'" class="logo">
-            <img loading="lazy" src="images/logo.webp" width="50" height="50" alt="">
+            <img loading="lazy" fetchpriority="high" src="images/logo.webp" width="50" height="50" alt="">
         </a>
         <button class="close-btn" (click)="closeMobileMenu()">×</button>
     </div>
