@@ -1,1 +1,54 @@
+
 /* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    padding-left: 0 !important;
+}
+ul,h1,h2,h3,h4,h5,h6,p{
+    margin-bottom: 0 !important;
+}
+
+button{
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+html{
+    font-size: 14px;
+    direction: rtl;
+}
+
+// .layout,
+// .w-container {
+//     width: 100%;
+//     max-width: 100%;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding-left: 20px;
+//     padding-right: 20px;
+// }
+
+@media(min-width:576px){
+    html{
+        font-size: 16px;
+    }
+}
+@media(min-width:768px){}
+@media(min-width:992px){
+    //    .layout,
+    // .w-container {
+    //     max-width: 1336px;
+    // }
+}

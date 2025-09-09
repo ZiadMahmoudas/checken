@@ -1,0 +1,368 @@
+/* General styles and fonts */
+:host {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-accent {
+    background-color: #FF5722; /* لون برتقالي جذاب */
+    color: white;
+}
+
+.btn-accent:hover {
+    background-color: #E64A19;
+}
+
+.btn-primary {
+    background-color: #4CAF50; /* لون أخضر */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #43A047;
+}
+
+.btn-secondary {
+    background-color: #E0E0E0;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: #D6D6D6;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 104vh; 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Common Section Styles */
+section {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+section h2 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+/* About Section */
+.about-section {
+    background-color: #f5f5f5;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: right;
+}
+
+.about-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.about-item h3 {
+    font-size: 1.6em;
+    color: #4CAF50;
+    margin: 20px 20px 10px;
+}
+
+.about-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    padding: 0 20px 20px;
+}
+
+/* Gallery Section */
+.gallery-preview-section {
+    position: relative;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.gallery-preview-section .overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.gallery-content h2 {
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.gallery-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Recipes Section */
+.recipes-section {
+    background-color: #ffffff;
+}
+
+.recipe-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 20px 20px 10px;
+}
+
+.recipe-card p {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.6;
+    margin: 0 20px 20px;
+}
+
+/* Contact Section */
+.contact-us-section {
+    position: relative;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-us-section .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-content h2 {
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.contact-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-content p, .about-section p, .gallery-content p, .recipes-section p, .contact-content p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 2.2em;
+    }
+}
+
+.recipes-section {
+    background-color: #f9f9f9; /* لون خلفية فاتح */
+    padding: 80px 0;
+}
+
+.recipes-section h2 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #666;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    direction: rtl; /* لضمان التنسيق الصحيح للمحتوى العربي */
+    margin-top: 25px;
+}
+
+.recipe-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe-content {
+    padding: 25px;
+    text-align: right;
+    flex-grow: 1; /* عشان يخلي المحتوى يملأ المساحة المتاحة */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-content h3 {
+    font-size: 1.8em;
+    color: #4CAF50;
+    margin: 0 0 10px;
+}
+
+.recipe-content p {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    align-self: flex-end; /* يخلي الزرار في نهاية البطاقة */
+    background-color: #E0E0E0;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: #D6D6D6;
+}

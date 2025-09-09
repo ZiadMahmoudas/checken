@@ -1,0 +1,122 @@
+<div
+  class="px-4 py-2 color d-none d-lg-flex justify-content-between align-items-center text-white"
+>
+  <div class="d-flex gap-5 contact ">
+    <div class="d-flex gap-2 align-items-center flex-row-reverse">
+      <i class="fa-regular fa-phone-flip"></i>
+      <a href="https://wa.me/+201110037311?text=مرحبا،%20أنا%20مهتم%20بخدماتكم.">+20 11 10037311</a>
+    </div>
+  </div>
+  <ul class="d-flex gap-2 socail">
+    <li>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </li>
+    <li>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    </li>
+    <li>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </li>
+    <li>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </li>
+  </ul>
+</div>
+
+<nav class="navbar px-4">
+  <a
+    [routerLink]="'/Home'"
+    [routerLinkActive]="'active'"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="logo"
+  >
+    <img src="images/logo.webp" width="50" height="50" alt="" />
+  </a>
+
+  <div class="nav-links desktop-menu">
+    <a
+      [routerLink]="'/About'"
+      [routerLinkActive]="'active'"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="link"
+      ><span>عنا</span></a
+    >
+    <a href="#" class="link"><span>خدمتنا</span></a>
+    <a href="#" class="link"><span>اسعارنا</span></a>
+    <div
+      class="dropdown-container"
+      (mouseenter)="showDropdown = true"
+      (mouseleave)="showDropdown = false"
+    >
+      <a class="link" [class.active]="showDropdown"> الصفحات </a>
+
+      <!-- <div class="dropdown-menu" [class.visible]="showDropdown">
+        <div class="dropdown-content">
+          <a href="#" class="dropdown-link"><span>Team</span></a>
+          <a href="#" class="dropdown-link"><span>Blog</span></a>
+          <a href="#" class="dropdown-link"><span>FAQ</span></a>
+          <a href="#" class="dropdown-link"><span>Reviews</span></a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="nav-icons d-flex gap-3 align-items-center">
+    <div class="d-flex align-items-center gap-5">
+      <a href="#" class="icon-link1"
+        ><i class="fas fa-search"></i>
+    </a>
+    </div>
+    <div class="Quota-link">
+      <a  href="https://wa.me/+201110037311?text=مرحبا،%20أنا%20مهتم%20بخدماتكم.">تواصل معنا &leftarrow;</a>
+    </div>
+  </div>
+
+  <button
+    class="navbar-toggler hamburger d-lg-none"
+    (click)="toggleMobileMenu()"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvasNavbar"
+    aria-controls="offcanvasNavbar"
+    aria-label="Toggle navigation"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu-overlay" [class.open]="showMobileMenu">
+  <div class="logo-mobile">
+    <a [routerLink]="'/Home'" class="logo">
+        <img src="images/logo.webp" width="50" height="50" alt="">
+    </a>
+    <button class="close-btn" (click)="closeMobileMenu()">×</button>
+  </div>
+
+  <div class="mobile-nav-links">
+    <a [routerLink]="'/About'" class="mobile-link"><span>عنا</span></a>
+    <a href="#" class="mobile-link"><span>خدمتنا</span></a>
+    <a href="#" class="mobile-link"><span>اسعارنا</span></a>
+
+    <div class="mobile-dropdown-container">
+      <div class="mobile-dropdown-header" (click)="toggleMobileDropdown()">
+        <span class="mobile-link">Pages</span>
+        <span class="plus-icon" [class.rotated]="showMobileDropdown">+</span>
+      </div>
+      <!-- <div
+        class="mobile-dropdown-content"
+        [class.expanded]="showMobileDropdown"
+      >
+        <a href="#" class="mobile-link sub-link"><span>Team</span></a>
+        <a href="#" class="mobile-link sub-link"><span>Blogs</span></a>
+        <a href="#" class="mobile-link sub-link"><span>FAQ</span></a>
+        <a href="#" class="mobile-link sub-link"><span>Reviews</span></a>
+      </div> -->
+    </div>
+        <div class="Quota-link">
+      <a  href="https://wa.me/+201110037311?text=مرحبا،%20أنا%20مهتم%20بخدماتكم.">تواصل معنا</a>
+    </div>
+  </div>
+</div>
