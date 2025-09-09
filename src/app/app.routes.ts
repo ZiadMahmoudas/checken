@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'Home', title: 'الرئيسية', pathMatch: 'full' },
+  { path: '', redirectTo: 'Home', pathMatch: 'full' },
   {
     path: 'Home',
-    title: 'الرئيسية',
     loadComponent: () => import('./pages/home/home').then((c) => c.Home),
-  data: {
+    data: {
+      title: 'الرئيسية',
       description: 'مرحباً بك في الصفحة الرئيسية، استكشف جميع معلوماتنا هنا.',
       image: 'https://www.example.com/home-image.jpg'
     },

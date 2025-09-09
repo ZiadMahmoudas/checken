@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import {
   animate,
@@ -15,6 +15,8 @@ import { CommonModule } from '@angular/common';
   imports: [RouterLink, RouterLinkActive,CommonModule,FormsModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
+    standalone:true,
+  encapsulation: ViewEncapsulation.None,
   animations: [
     trigger('slideFromTop', [
       state(
@@ -79,6 +81,7 @@ import { CommonModule } from '@angular/common';
       ]),
     ]),
   ],
+  
 })
 export class Navbar {
   showDropdown: boolean = false;

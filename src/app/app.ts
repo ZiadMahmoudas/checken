@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from "./main-layout/navbar/navbar";
 declare var $:any;
@@ -6,7 +6,9 @@ declare var $:any;
   selector: 'app-root',
   imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
+    standalone:true,
+  encapsulation: ViewEncapsulation.None,
 })
 export class App {
   
