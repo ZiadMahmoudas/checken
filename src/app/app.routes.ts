@@ -5,8 +5,8 @@ export const routes: Routes = [
   {
     path: 'Home',
     loadComponent: () => import('./pages/home/home').then((c) => c.Home),
+    title: 'الرئيسية',
     data: {
-      title: 'الرئيسية',
       description: 'مرحباً بك في الصفحة الرئيسية، استكشف جميع معلوماتنا هنا.',
       image: 'https://www.example.com/home-image.jpg'
     },
