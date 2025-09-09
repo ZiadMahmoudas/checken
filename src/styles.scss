@@ -19,11 +19,11 @@ ul,h1,h2,h3,h4,h5,h6,p{
     margin-bottom: 0 !important;
 }
 
-button{
-    border: 0;
-    outline: 0;
-    box-shadow: none;
-    background-color: transparent;
+button,.hamburger{
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
 html{
     font-size: 14px;

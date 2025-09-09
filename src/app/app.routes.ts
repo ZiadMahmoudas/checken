@@ -11,13 +11,13 @@ export const routes: Routes = [
       image: 'https://www.example.com/home-image.jpg'
     },
   },
-//   {
-//     path: 'About',
-//     // component: AboutComponent,
-//     title: 'عن الموقع',
-//     data: {
-//       description: 'تعرف على تفاصيل الموقع وأهدافه في هذه الصفحة.',
-//       image: 'https://www.example.com/about-image.jpg'
-//     },
-//   },
+  {
+    path: 'About',
+    loadComponent: () => import('./pages/about/about').then((c) => c.About),
+    title: 'عن الموقع',
+    data: {
+      description: 'تعرف على تفاصيل الموقع وأهدافه في هذه الصفحة.',
+      image: 'https://www.example.com/about-image.jpg'
+    },
+  },
 ];

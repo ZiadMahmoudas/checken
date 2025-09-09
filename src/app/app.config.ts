@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter, withViewTransitions } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -11,10 +11,12 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes,withViewTransitions()),
-      provideClientHydration(
-      withEventReplay(),
-      withIncrementalHydration(),
-      withHttpTransferCacheOptions({ includePostRequests: true })
+    importProvidersFrom(
+    ),
+    provideClientHydration(
+    // withEventReplay(),
+    // withIncrementalHydration(),
+    // withHttpTransferCacheOptions({ includePostRequests: true })
     ),
     provideAnimations(),
     {
