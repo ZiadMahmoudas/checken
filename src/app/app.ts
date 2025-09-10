@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from "./main-layout/navbar/navbar";
+import { MetaService } from './meta/meta-service';
 declare var $:any;
 @Component({
   selector: 'app-root',
@@ -11,10 +12,12 @@ declare var $:any;
   encapsulation: ViewEncapsulation.None,
 })
 export class App {
-  
+  constructor(private metaService:MetaService){}
      private scrollHandler = this.onScroll.bind(this);
   private backToTopBtn!: HTMLElement;
-
+ngOnInit(){
+  this.metaService.setMeta();
+}
   ngAfterViewInit(): void {
     this.backToTopBtn = document.getElementById('backToTop') as HTMLElement;
 

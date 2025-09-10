@@ -89,7 +89,15 @@
             ]
           }
         }
-      }
+      },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "main": "src/main.server.ts", 
+            "tsConfig": "tsconfig.server.json",
+            "outputPath": "dist/app-server"
+          }
+        }
     }
   },
   "cli": {

@@ -266,6 +266,10 @@ section h2 {
 .contact-info {
     font-size: 1em;
     margin-top: 20px;
+    span{
+ unicode-bidi: bidi-override;
+        direction: ltr;
+    }
 }
 
 /* Responsive Design */
